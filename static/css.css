@@ -1,0 +1,123 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body {
+    background: url('bg.jpg') no-repeat center;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    background: #333334;
+    position: fixed;
+    top: 0;
+    -webkit-box-shadow: 2px 7px 27px 5px rgba(0,0,0,.9);
+    -moz-box-shadow: 2px 7px 27px 5px rgba(0,0,0,.9);
+    box-shadow: 2px 7px 27px 5px rgba(0,0,0,.9);
+    text-align: center;
+}
+
+#search {
+    width: 300px;
+    margin-top: 10px;
+}
+
+
+#search input[type="text"] {
+    background: url(search-white.png) no-repeat 10px 6px #444;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #d7d7d7;
+    width:150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    outline: none;
+}
+
+#search input[type="text"]:focus {
+    background: url(search-dark.png) no-repeat 10px 6px #fcfcfc;
+    color: #6a6f75;
+    width: 200px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+
+
+.contents {
+    height: 300px;
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.box {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    blur: 10px;
+    margin: 10px;
+    vertical-align: top;
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+    background: rgba(255,255,255,1);
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.name {
+    font-size: 1.2em;
+    display: block;
+    padding: 5px;
+}
+
+.place {
+    font-size: .8em;
+    margin-left: 10px;
+}
+.phone {
+    font-size: .8em;
+    margin-left: 10px;
+}
+.website {
+    font-size: .8em;
+    margin-left: 10px;
+}
+
+.hidden {
+    display:none !important;
+}
+
+.modal {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+        align-items: center;
+        justify-content: center;
+}

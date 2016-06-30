@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wew</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../static/css.css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+        <!-- <div class="blur"></div> -->
+        <div class="header">
+            <div id="search">
+                <input type="text" name="name" value="" placeholder="NGITA TA LUGAR">
+            </div>
+        </div>
+        <div class="contents">
+            {% for d in data %}
+                <div class="box" data-lat="{{d.lat}}" data-long="{{d.long}}">
+                    <div class = "box-content">
+                        <div class="name">
+                            {{d.name}}
+                        </div>
+                        <div class="place">
+                            {{d.locality}}, {{d.country}}
+                        </div>
+                        <div class="phone">
+                            {{d.phone}}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    <div class="modal">
+        <iframe class = "iframe"
+          width="800"
+          height="750"
+          frameborder="0" style="border:1"
+          src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyCZ7r3VpJRKalB1tfj8InUkP42CD7lvNrk&location=46.414382,10.013988" allowfullscreen>
+        </iframe>
+    </div>
+    </body>
+</html>
+<script src="../static/jquery.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+    $('.modal').fadeOut();
+    $('.box').on('click',function() {
+        var lat = $(this).data('lat');
+        var long = $(this).data('long');
+        var query = 'https://www.google.com/maps/embed/v1/streetview?key=AIzaSyCZ7r3VpJRKalB1tfj8InUkP42CD7lvNrk&location=';
+        var url = query+lat+','+long;
+        $('.iframe').attr('src', url);
+        $('.modal').fadeIn(100);
+    });
+    $(".modal").on('click', function(e){
+        if($(e.target).hasClass('modal')) {
+            $('.modal').fadeOut(100);
+        }
+    });
+</script>
